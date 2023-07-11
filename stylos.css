@@ -27,6 +27,33 @@
     
   }
   
+  .regresarya {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 5px 15px;
+    border: none;
+    background: #e70c7a;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    
+  }
+  
+  .regresarya a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .regresarya:hover {
+    background: #d60b68;
+  }
+  
+  .regresarya:active {
+    background: #c3055c;
+  }
+  
+
   .contenedor {
     max-width: 1200px;
     padding: 10px;
