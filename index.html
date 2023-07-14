@@ -3,6 +3,7 @@
 <head>
   <script src="https://kit.fontawesome.com/67d84d7b03.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  
   <meta charset="UTF-8">
   <title>Mini Donas Bogotá | Bogotá, Colombia</title>
   
@@ -25,6 +26,10 @@
   
   <!-- Agrega aquí los enlaces a tus archivos CSS y JavaScript -->
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
 </head>
 
 <body>
@@ -35,18 +40,90 @@
     <div class="text-container">
       <div class="text-container2">
         <h1>¡Disfruta sin Culpas!</h1>
-        <a href="shop.html" >CARRITO DE COMPRAS</a>
+        <a href="shop.html" >CARRITO DE COMPRAS </a>
       </div>
     </div>
   </header>
-  
   <section>
-    <!-- <section class="flavors">
-      <img src="" alt="" width="100%">
-    </section> -->
+    <div class="container">
+        <div class="mySlides">
+         <img src="img/carrusel (1).jpeg" class="small-image">
+      </div>
+
+      <div class="mySlides">
+          <img src="img/carrusel (2).jpeg" class="small-image">
+      </div>
+    
+      <div class="mySlides">
+          <img src="img/carrusel (3).jpeg" class="small-image">
+      </div>
+    
+      <div class="mySlides">
+          <img src="img/carrusel (4).jpeg" class="small-image">
+      </div>
+    
+      <div class="mySlides">
+          <img src="img/carrusel (5).jpeg" class="small-image">
+      </div>
+    
+      <div class="mySlides">
+          <img src="img/carrusel (6).jpeg" class="small-image">
+    </div>
+            <div class="mySlides">
+          <img src="img/carrusel (7).jpeg" class="small-image">
+      </div>
+
+      <div class="mySlides">
+          <img src="img/carrusel (8).jpeg" class="small-image">
+      </div>
+    
+      <div class="mySlides">
+          <img src="img/carrusel (9).jpeg" class="small-image">
+      </div>
+  </div>
   
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+    
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="img/carrusel (1).jpeg" onclick="currentSlide(1)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/carrusel (2).jpeg" onclick="currentSlide(1)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/carrusel (3).jpeg"  onclick="currentSlide(2)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/carrusel (4).jpeg"  onclick="currentSlide(3)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/carrusel (5).jpeg"  onclick="currentSlide(4)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/carrusel (6).jpeg"  onclick="currentSlide(5)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/carrusel (7).jpeg"  onclick="currentSlide(5)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/carrusel (8).jpeg"  onclick="currentSlide(5)" alt="">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="img/carrusel (9).jpeg"  onclick="currentSlide(5)" alt="">
+        </div>
+      </div>
+    </div>
+   
     <section class="promotions">
       <h2>Promociones</h2>
+      <br>
       <div class="promotion-items">
         <div class="promotion-item">
           <img src="img/promopp.jpeg" alt="Promoción 2" >
@@ -77,7 +154,7 @@
         </a>
       </div>
     </section>
-      
+     
     <section class="contact">
       <h2>Contáctanos</h2>
       <form id="contact-form" action="https://formspree.io/f/xzbqnbyk" method="POST">
@@ -97,10 +174,7 @@
       </form>
     </section>
   </section>
-  
-  <footer>
-    <p>&copy; 2023 Mini Donas Bogotá. Todos los derechos reservados.</p>
-  </footer>
+
   
   <div id="image1" class="modal">
     <a href="#" class="close">&times;</a>
@@ -121,9 +195,11 @@
     <a href="#" class="close">&times;</a>
     <img src="img/img4.jpg" alt="Imagen 4">
   </div>
-  
-  <script>
-    // Agrega aquí tu código JavaScript si es necesario
-  </script>
+
+  <footer>
+    <p>&copy; 2023 Mini Donas Bogotá. Todos los derechos reservados.</p>
+  </footer>
+<script src="app.js"></script>  
+
 </body>
 </html>
