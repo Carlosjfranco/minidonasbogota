@@ -40,6 +40,34 @@ section {
   height: 30%;
 }
 
+.image-gallery img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.image-gallery img {
+    width: 400px;
+    height: 400px;
+  }
+
+ .image-gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+
+.image-gallery img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.image-gallery a:hover img {
+  transform: scale(1.1);
+}
+
 .small-image {
   max-width: auto;
   height: 500px;
@@ -164,6 +192,7 @@ form button {
   letter-spacing: 2px;
 }
 
+
 .promotions {
   text-align: center;
 }
@@ -186,11 +215,6 @@ form button {
     width: 100%;
     object-fit: cover;
   }
-
-  .image-gallery img {
-    width: 400px;
-    height: 400px;
-  }
 }
 
 /* Responsive */
@@ -200,6 +224,42 @@ form button {
     flex-direction: column;
     align-items: center;
   }
+  
+.image-gallery img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.image-gallery img {
+    width: 200px;
+    height: 200px;
+  }
+
+ .image-gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+
+.image-gallery img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.image-gallery a:hover img {
+  transform: scale(1.1);
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
   .demo {
     opacity: 0.6;
     width: 30px;
@@ -254,11 +314,6 @@ form button {
     height: auto;
     width: 100%;
     object-fit: cover;
-  }
-
-  .image-gallery img {
-    width: 100%;
-    height: auto;
   }
 
 .header {
@@ -345,28 +400,6 @@ p {
   background-color: #e70c7a;
 }
 
-.image-gallery {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.image-gallery a {
-  display: block;
-  margin: 10px;
-  position: relative;
-}
-
-.image-gallery img {
-  object-fit: cover;
-  transition: transform 0.3s;
-}
-
-.image-gallery a:hover img {
-  transform: scale(1.1);
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -426,4 +459,3 @@ p {
     font-size: 20px;
   }
 }
-
