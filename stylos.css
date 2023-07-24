@@ -97,6 +97,7 @@
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
+    
   }
   
   .contenedor-items .item .precio-item {
@@ -118,8 +119,9 @@
   }
   
   /*carrito seccion */
+
   .carrito {
-    border: 1px solid #666;
+    border: 1px solid #525050;
     width: 35%;
     margin-top: 30px;
     border-radius: 10px;
@@ -131,12 +133,30 @@
     opacity: 0;
     margin-right: -100%;
   }
+
   
+  .carrito-items {
+ 
+    padding: 20px; /* Espaciado interno para que el contenido no quede pegado al borde */
+    text-align: left; /* Alinear el texto a la izquierda */
+    box-sizing: border-box; /* Incluir el padding en el ancho total del input */
+    text-transform: uppercase;
+  }
+  input[type="text"]{
+    width: 100%; /* El input ocupará el 100% del ancho del contenedor */
+    box-sizing: border-box; /* Incluir el padding en el ancho total del input */
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 5px;
+
+  }
+
   .carrito .header-carrito {
     background-color: #e70c7a;
     color: #fff;
     text-align: center;
-    padding: 30px 0;
+    padding: 15px 0;
   }
   
   .carrito .carrito-item {
@@ -148,7 +168,8 @@
   }
   
   .carrito .carrito-item img {
-    margin-right: 50px;
+    margin-right: 30px;
+    
   }
   
   .carrito .carrito-item .carrito-item-titulo {
@@ -156,6 +177,7 @@
     font-weight: bold;
     margin-bottom: 10px;
     text-transform: uppercase;
+    margin-right: 30px;
   }
   
   .carrito .carrito-item .selector-cantidad {
@@ -241,7 +263,19 @@
     cursor: pointer;
     transition: .3s;
   }
+  .input-centrado {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
   
+  .input-direccion {
+    width: 100%; /* Ajusta el ancho como desees */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+
   .carrito-total .btn-pagar:hover {
     scale: 1.05;
   }
@@ -284,5 +318,12 @@
             order: 2; /* Cambio de orden */
             margin-top: 10%; /* Agregado para separar el carrito de los items */
           }
+          .carrito .carrito-item .carrito-item-titulo {
+
+            margin-right: 22%;
+            justify-content: right;
+            text-align: center;
+          }
+
         }
        

@@ -8,6 +8,28 @@ if(document.readyState == 'loading'){
     ready();
 }
 
+function mostrarDireccionInput() {
+    var direccionInput = document.getElementById('direccion-input');
+    var envioRadio = document.getElementById('envio');
+  
+    if (envioRadio.checked) {
+      direccionInput.style.display = 'block';
+    } else {
+      direccionInput.style.display = 'none';
+      document.getElementById('direccion-envio').value = ''; // Limpia la información del input de dirección
+    }
+  }
+  function ocultarDireccionInput() {
+    var direccionInput = document.getElementById('direccion-input');
+    direccionInput.style.display = 'none';
+    document.getElementById('direccion-envio').value = ''; // Limpia la información del input de dirección
+  
+    // Ajustar el margen derecho del contenedor del carrito
+    var carritoContenedor = document.getElementsByClassName('carrito')[0];
+    carritoContenedor.style.marginRight = '-100%';
+  }
+
+
 // SLIDER DE LAS DONITAS
 
 let slideIndex = 1;
@@ -54,11 +76,6 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
-
-
-
-
-
 function ready(){
     
     //Agregremos funcionalidad a los botones eliminar del carrito
@@ -103,7 +120,9 @@ function pagarClicked() {
     var titulo = item.getElementsByClassName('carrito-item-titulo')[0].innerText;
     var cantidad = item.getElementsByClassName('carrito-item-cantidad')[0].value;
     var precio = item.getElementsByClassName('carrito-item-precio')[0].innerText;
-
+    var nombreApellido = document.getElementById('nombre-apellido').value;
+    var direccionInput = document.getElementById('direccion-input');
+    var direccionEnvio = direccionInput.style.display === 'block' ? document.getElementById('direccion-envio').value : 'Retirare personalmente en MiniDonasBogotá';
     pedido += titulo + ' - Cantidad: ' + cantidad + ' - Precio: ' + precio + '\n';
 
     // // Calcula el subtotal del item actual
@@ -113,9 +132,8 @@ function pagarClicked() {
   }
 
   // Generar el mensaje de agradecimiento con el pedido y el total del carrito
-  var mensajeAgradecimiento = 
-  '*Hola MiniDonas Bogotá*\n ¡Necesito comprar los siguientes productos!\n\n*Pedido:*\n'
-   + pedido + '\n*Total del carrito:* $' + totalCarrito.toFixed(3)  ;
+  var mensajeAgradecimiento =
+  '*Hola MiniDonas Bogotá*\n *Mi Nombre es:* ' + nombreApellido +  ' \n ¡Necesito comprar los siguientes productos!\n*Pedido:*\n' + pedido + '\n *Dirección de envío:* \n' + direccionEnvio + '\n\n*Total del carrito:* $' + totalCarrito.toFixed(3);
 
   // Generar el enlace de chat de WhatsApp con el mensaje predefinido
   var numeroTelefono = '3124879785'; // Reemplaza con el número de teléfono destinatario
@@ -137,8 +155,6 @@ function pagarClicked() {
   ocultarCarrito();
 }
 
-
-
 //Funciòn que controla el boton clickeado de agregar al carrito
 function agregarAlCarritoClicked(event){
     var button = event.target;
@@ -151,6 +167,10 @@ function agregarAlCarritoClicked(event){
     agregarItemAlCarrito(titulo, precio, imagenSrc);
 
     hacerVisibleCarrito();
+    button.innerText = "Producto agregado";
+    setTimeout(function () {
+      button.innerText = textoOriginalBoton;
+    }, 1000); // Cambiar el tiempo a tu preferencia (en milisegundos)
 }
 
 //Funcion que hace visible el carrito
@@ -255,6 +275,7 @@ function ocultarCarrito(){
         carrito.style.marginRight = '-100%';
         carrito.style.opacity = '0';
         carritoVisible = false;
+        
     
         var items =document.getElementsByClassName('contenedor-items')[0];
         items.style.width = '100%';
@@ -282,4 +303,3 @@ function actualizarTotalCarrito(){
     document.getElementsByClassName('carrito-precio-total')[0].innerText = '$'+total.toLocaleString("es") + ",00";
 
 }
-
