@@ -6,15 +6,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="app.js" async></script>
     <link rel="stylesheet" href="stylos.css">
-    <title>Carrito de Compras </i></title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8996J5Y72M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-8996J5Y72M');
+</script>
+    <title>Carrito de Compras </i></title>
 </head>
 <body>
     <header>
         <h1>Mini Donas Bogotá</h1>
     </header>
     <div class="regresarya">
-    <a href="index.html">REGRESAR </a>
+        <a href="index.html">REGRESAR A LA PAGINA PRINCIPAL </a>
     </div>
     <section class="contenedor">
         <div class="contenedor-items">
@@ -128,10 +137,14 @@
                     $0,00
                 </span>
             </div>
+            
             <button id="btn-pagar" class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+            <a>*El envio a domicilio tiene un costo adicional.</a>
         </div>
         
     </div>       
     </section>
+    
+
 </body>
 </html>
