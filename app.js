@@ -1,5 +1,6 @@
 //Variable que mantiene el estado visible del carrito
 var carritoVisible = false;
+var textoOriginalBoton;
 
 //Espermos que todos los elementos de la pàgina cargen para ejecutar el script
 if(document.readyState == 'loading'){
@@ -103,16 +104,37 @@ function ready(){
     var botonesAgregarAlCarrito = document.getElementsByClassName('boton-item');
     for(var i=0; i<botonesAgregarAlCarrito.length;i++){
         var button = botonesAgregarAlCarrito[i];
+        textoOriginalBoton = button.innerText;
         button.addEventListener('click', agregarAlCarritoClicked);
     }
 
     //Agregamos funcionalidad al botón comprar
     document.getElementsByClassName('btn-pagar')[0].addEventListener('click',pagarClicked)
 }
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   console.log("El DOM se ha cargado correctamente.");
+//   const popup = document.getElementById("popup");
+//   const cerrarPopup = document.getElementById("cerrarPopup");
+
+//   // Mostrar el pop-up
+//   popup.style.display = "block";
+
+//   // Cerrar el pop-up cuando se haga clic en el botón de cerrar
+//   cerrarPopup.addEventListener("click", function() {
+//       popup.style.display = "none";
+//   });
+
+//   // Cerrar el pop-up automáticamente después de 5 segundos
+//   setTimeout(function() {
+//       popup.style.display = "none";
+//   }, 5000);
+  
+// });
+
 function pagarClicked() {
   var carritoItems = document.getElementsByClassName('carrito-item');
   var pedido = '';
-
   var totalCarrito = 0;
 
   for (var i = 0; i < carritoItems.length; i++) {
@@ -155,7 +177,7 @@ function pagarClicked() {
   ocultarCarrito();
 }
 
-//Funciòn que controla el boton clickeado de agregar al carrito
+//Función que controla el boton clickeado de agregar al carrito
 function agregarAlCarritoClicked(event){
     var button = event.target;
     var item = button.parentElement;
@@ -194,7 +216,7 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc){
     var nombresItemsCarrito = itemsCarrito.getElementsByClassName('carrito-item-titulo');
     for(var i=0;i < nombresItemsCarrito.length;i++){
         if(nombresItemsCarrito[i].innerText==titulo){
-            alert("El item ya se encuentra en el carrito");
+          Swal.fire("El item ya se encuentra en el carrito");
             return;
         }
     }
